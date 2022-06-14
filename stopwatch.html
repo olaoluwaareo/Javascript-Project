@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <titl></title>
+    <link rel="stylesheet" href="style.css"> 
+    <script>
+    function startCounting()
+    {
+        var qq = start.value;
+        var qqq = minutes.value;
+        var q = hour.value;
+        // alert(qq)
+        qq--;
+        start.value = qq;
+        if (qq>0) {        
+            setTimeout(startCounting, 700)
+        }
+        else if(qq==0 && qqq>0 ){
+        start.value=59;
+        
+        q--;
+        qqq--;
+        minutes.value = qqq;
+        setTimeout(startCounting, 700)
+        }
+    
+        
+    }
+    </script>
+</head>
+<body>
+<div class="flex">
+    <div>
+        <input type="number" placeholder="Hr" id="hour">
+    </div>
+    <div>
+        <input type="number" placeholder="Mm" id="minutes"> 
+    </div>
+    <div>
+            <input type="number" placeholder="Ss" id="start">
+    </div>
+</div>
+<div id="button">
+    <button onclick="startCounting()" onclick="startCount()">START!</button>   
+</div>
+
+</body>
+</html>
